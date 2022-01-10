@@ -7,7 +7,7 @@
 
 //? How can you enable using the import syntax using node js
 // ! answer:
-// Install necessary packages: "npm install @babel/core @babel/register @babel/preset-env --save-dev"
+// change type of file from .js to .mjs to use import syntax
 //? Give 2 node.js environment variables that are not available when using the import syntax.
 // import fs from "fs";
 // import express from 'express';
