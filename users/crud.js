@@ -2,11 +2,12 @@ const uniqid = require("uniqid");
 const chalk = require("chalk");
 const fs = require("fs");
 
-const addUser = (id, name, email, password) => {
+const addUser = (name, email, password) => {
   const users = loadUsers();
-
+  // const obj = {id: uniqid()};
+  // users.push(obj);
   users.push({
-    id: id ? id : uniqid(),
+    id: uniqid(),
     name,
     email,
     password,
@@ -34,9 +35,19 @@ const deleteUser = (id) => {
   }
 };
 
-const updateUser = (id, name, email, password) => {
-  deleteUser(id);
-  addUser(id, name, email, password);
+const updateUser = function (id) {
+  const users = loadUsers();
+  const indexObj = users.indexOf(users.find((obj) => obj.id === id));
+  if (readUser(id)) {
+    // users[indexObj] = { id, name, email, password };
+    Object.keys(users[indexObj]).forEach((key, i) => {
+      users[indexObj][key] = arguments[i];
+    });
+    saveUsers(users);
+    console.log(chalk.green.inverse("user updated!"));
+  } else {
+    console.log(chalk.red.inverse("No user found to update!"));
+  }
 };
 
 const saveUsers = (users) => {
