@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/yardentamir/nodejs-exercises/issues"
   },
-  "homepage": "https://github.com/yardentamir/nodejs-exercises#readme"
+  "homepage": "https://github.com/yardentamir/nodejs-exercises#readme",
+  "dependencies": {
+    "uniqid": "^5.4.0"
+  }
 }
