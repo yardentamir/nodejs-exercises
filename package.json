@@ -15,9 +15,5 @@
   "bugs": {
     "url": "https://github.com/yardentamir/nodejs-exercises/issues"
   },
-  "homepage": "https://github.com/yardentamir/nodejs-exercises#readme",
-  "dependencies": {
-    "chalk": "^5.0.0",
-    "yargs": "^17.3.1"
-  }
+  "homepage": "https://github.com/yardentamir/nodejs-exercises#readme"
 }
