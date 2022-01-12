@@ -15,5 +15,5 @@ app.put("/numbers", (req, res) => {
 });
 
 app.listen(3000, () => {
-  res.send("Server is up on port 3000");
+  console.log("Server is up on port 3000");
 });

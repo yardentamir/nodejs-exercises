@@ -4,8 +4,6 @@ const fs = require("fs");
 
 const addUser = (name, email, password) => {
   const users = loadUsers();
-  // const obj = {id: uniqid()};
-  // users.push(obj);
   users.push({
     id: uniqid(),
     name,
