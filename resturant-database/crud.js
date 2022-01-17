@@ -54,6 +54,7 @@
 
 // shows all restaurant that name start with b
 3.1 db.restaurants.find({name:{$regex: /^b/i}})
+3.1.1 db.restaurants.find({ name: { $regex: "^t", $options: "1" } })
 
 // count all restaurants
 3.2 db.restaurants.countDocuments()
@@ -64,7 +65,7 @@
 // ** Aggregation Operations **
 
 // 4.1 Write a mongoDb query to display all restaurants average score.
-4.1 db.restaurants.aggregate([{ $group: { _id: "_id", $avg: "$reviews.score" } }]);
+4.1 db.restaurants.aggregate([{ $group: { _id: "_id", $avg: "$reviews.score" }}]);
 
 // 4.2 Write a mongoDb query to display a specific restaurant average score.
 4.2 db.restaurants.aggregate([{$project: { avgScore: { $avg: "$reviews.score" },}, },]);
