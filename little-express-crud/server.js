@@ -23,7 +23,6 @@ app.post("/", (req, res) => {
 app.delete("/", (req, res) => {
   try {
     const { number } = req.query;
-    console.log(numbersArray.includes(+number));
     if (!numbersArray.includes(+number))
       throw new Error("the number doesn’t exist");
     const index = numbersArray.indexOf(parseInt(+number));
