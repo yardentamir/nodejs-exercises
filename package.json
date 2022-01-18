@@ -4,7 +4,7 @@
   "description": "",
   "main": "node-vs-js.js",
   "scripts": {
-    "devStart": "nodemon ./mongoose-blog-schema/mongoose.js"
+    "devStart": "nodemon ./mongoose-products/app.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
     "axios": "^0.24.0",
     "dotenv": "^14.2.0",
     "express": "^4.17.2",
+    "mongod": "^2.0.0",
     "mongodb": "^4.3.0",
     "mongoose": "^6.1.7",
     "postman-request": "^2.88.1-postman.31",

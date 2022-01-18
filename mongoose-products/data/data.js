@@ -5,8 +5,8 @@ const products = [
     isActive: true,
     details: {
       price: 20,
-      description: "jkvbjdflbkjsflbjsl;jdbkljs",
-      phoneNumber: "0525867945",
+      description: "6666666",
+      phoneNumber: "052888",
     },
   },
   {
@@ -16,7 +16,7 @@ const products = [
     details: {
       price: 20,
       description: "jkvbjdflbkjsflbjsl;jdbkljs",
-      phoneNumber: "0525867945",
+      phoneNumber: "0588888",
     },
   },
   {
@@ -26,7 +26,7 @@ const products = [
     details: {
       price: 20,
       description: "jkvbjdflbkjsflbjsl;jdbkljs",
-      phoneNumber: "0525867945",
+      phoneNumber: "052588888",
     },
   },
 ];
