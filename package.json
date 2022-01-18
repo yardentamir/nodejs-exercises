@@ -19,6 +19,8 @@
   "dependencies": {
     "axios": "^0.24.0",
     "express": "^4.17.2",
+    "mongodb": "^4.3.0",
+    "mongoose": "^6.1.7",
     "postman-request": "^2.88.1-postman.31",
     "request": "^2.88.2",
     "uniqid": "^5.4.0"
