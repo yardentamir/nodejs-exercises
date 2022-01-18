@@ -4,7 +4,6 @@ post_id = mongoose.SchemaTypes.ObjectId;
 
 const users = [
   {
-    _id: user_id,
     name: "Tamar",
     age: 20,
     email: "Tamar.gmail.com",
