@@ -5,7 +5,7 @@ const User = require("./schema/User");
 const Post = require("./schema/Post");
 const Comment = require("./schema/Comment");
 
-mongoose.connect(process.env.HOST.toString());
+mongoose.connect(process.env.HOST);
 
 const addUser = async (user, email) => {
   try {

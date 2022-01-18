@@ -11,6 +11,7 @@ const commentSchema = new mongoose.Schema({
     type: Date,
     default: () => Date.now(),
   },
+  blog: mongoose.SchemaTypes.ObjectId,
 });
 
 module.exports = mongoose.model("Comment", commentSchema);

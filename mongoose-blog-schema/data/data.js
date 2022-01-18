@@ -1,8 +1,14 @@
+const mongoose = require("mongoose");
+user_id = mongoose.SchemaTypes.ObjectId;
+post_id = mongoose.SchemaTypes.ObjectId;
+
 const users = [
   {
+    _id: user_id,
     name: "Tamar",
     age: 20,
     email: "Tamar.gmail.com",
+    blogs: [post_id],
   },
   {
     name: "Julie",
@@ -13,12 +19,11 @@ const users = [
 
 const posts = [
   {
-    userId: 1,
     title: "post title 1",
     text: "post text1",
+    comments: [post_id],
   },
   {
-    userId: 2,
     title: "post title 2",
     text: "post text2",
   },
@@ -26,7 +31,8 @@ const posts = [
 
 const comments = [
   {
-    userId: 1,
+    postId: post_id,
+    userId: user_id,
     text: "post text1",
   },
 ];
