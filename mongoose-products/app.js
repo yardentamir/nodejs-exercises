@@ -5,17 +5,17 @@ const { products } = require("./data/data");
 
 mongoose.connect(process.env.LOCALHOST);
 
-// const addProduct = async (product) => {
-//   try {
-//     const newProduct = await Product.create(product);
-//     await newProduct.save();
-//   } catch (err) {
-//     console.log(err.message);
-//   }
-// };
+const addProduct = async (product) => {
+  try {
+    const newProduct = await Product.create(product);
+    await newProduct.save();
+  } catch (err) {
+    console.log(err.message);
+  }
+};
 
-// products.forEach((product) => {
-//   addProduct(product);
-// });
+products.forEach((product) => {
+  addProduct(product);
+});
 
-console.log("hi");
+console.log("hi hi");
