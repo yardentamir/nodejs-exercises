@@ -11,12 +11,11 @@ const loadProducts = async (req, res) => {
     const products = await allProducts();
     res.status(201).send(products);
   } catch (e) {
-    res.status(500).send();
+    res.status(500).send(e);
   }
 };
 
 const addProduct = async (req, res) => {
-  console.log(req.body);
   const product = new Product(req.body);
 
   try {
@@ -47,7 +46,7 @@ const loadActiveProducts = async (req, res) => {
   try {
     const product = await findBy("isActive", true);
 
-    if (!product) {
+    if (product.length === 0) {
       return res.status(404).send("There is no such products");
     }
 
@@ -62,7 +61,7 @@ const loadProductsByPriceRange = async (req, res) => {
     const { min, max } = req.body;
     const product = await findByRange(min, max);
 
-    if (!product) {
+    if (product.length === 0) {
       return res.status(404).send("There is no such products");
     }
 
@@ -76,8 +75,8 @@ const deleteProducts = async (req, res) => {
   try {
     const product = await Product.remove();
 
-    if (!product) {
-      return res.status(404).send("There is no such product");
+    if (product.length === 0) {
+      return res.status(404).send("There is no such products");
     }
 
     res.send("deleted successfully");
@@ -91,8 +90,8 @@ const deleteProduct = async (req, res) => {
     const { id } = req.params;
     const product = await Product.findByIdAndRemove(id);
 
-    if (!product) {
-      return res.status(404).send("There is no such product");
+    if (product.length === 0) {
+      return res.status(404).send("There is no such products");
     }
 
     res.send("deleted successfully");
@@ -105,10 +104,12 @@ const updateProduct = async (req, res) => {
   const { id } = req.params;
   const { body } = req;
   try {
-    const updateAnswer = updateToProduct(id, body);
-    if (!updateAnswer) {
-      return res.status(404).send("There is no such product");
+    const updateAnswer = await updateToProduct(id, body);
+
+    if (updateAnswer.length === 0) {
+      return res.status(404).send("There is no such products");
     }
+
     const product = await Product.findById(id);
     await product.save();
     res.send(product);
