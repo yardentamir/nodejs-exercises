@@ -17,5 +17,3 @@ const addProduct = async (product) => {
 products.forEach((product) => {
   addProduct(product);
 });
-
-console.log("hi hi");

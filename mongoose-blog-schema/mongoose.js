@@ -36,14 +36,14 @@ const addComments = async (comment) => {
   }
 };
 
-// users.forEach((user) => {
-//   addUser(user, user.email);
-// });
+users.forEach((user) => {
+  addUser(user, user.email);
+});
 
-// posts.forEach((post) => {
-//   addPosts(post);
-// });
+posts.forEach((post) => {
+  addPosts(post);
+});
 
-// comments.forEach((comment) => {
-//   addComments(comment);
-// });
+comments.forEach((comment) => {
+  addComments(comment);
+});
